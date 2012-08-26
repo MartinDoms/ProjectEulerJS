@@ -1,0 +1,28 @@
+<html>
+<body>
+<head>
+	<script text="text/javascript" src="qunit/qunit.js"></script>
+	<link rel="stylesheet" href="qunit/qunit.css">
+</head>
+<script type="text/javascript">
+
+function sumOf35(x) {
+	var result = 0;
+	for (var i = 0; i < x; i++) {
+		if (i % 3 == 0 || i % 5 == 0) {
+			result += i;
+		}
+	}
+	return result;
+}
+
+test("sumOf35", function() {
+	equal(sumOf35(10), 23);
+	equal(sumOf35(1000), 233168);
+});
+
+
+</script>
+
+<div id="qunit" />
+</body>

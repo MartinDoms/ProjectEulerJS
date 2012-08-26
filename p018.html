@@ -1,0 +1,112 @@
+<html>
+<body>
+<head>
+	<script text="text/javascript" src="qunit/qunit.js"></script>
+	<link rel="stylesheet" href="qunit/qunit.css">
+</head>
+<script type="text/javascript">
+
+var smallTree = [
+3,
+7, 4,
+2, 4, 6,
+8, 5, 9, 3]
+
+var bigTree = [
+75,
+95, 64,
+17, 47, 82,
+18, 35, 87, 10,
+20, 04, 82, 47, 65,
+19, 01, 23, 75, 03, 34,
+88, 02, 77, 73, 07, 63, 67,
+99, 65, 04, 28, 06, 16, 70, 92,
+41, 41, 26, 56, 83, 40, 80, 70, 33,
+41, 48, 72, 33, 47, 32, 37, 16, 94, 29,
+53, 71, 44, 65, 25, 43, 91, 52, 97, 51, 14,
+70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57,
+91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48,
+63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31,
+04, 62, 98, 27, 23, 09, 70, 98, 73, 93, 38, 53, 60, 04, 23]
+
+function getDest(graph) {
+	var d = [];
+	for (var i = graph.length-1; i > 0; i--) {
+		if (graph[i].length == 0) d.push(i);
+		else break;
+	}
+	return d;
+}
+
+function levelFrom(n) {
+	var l = 1;
+	for (var i = 0; i < n; l++,i+=l) {}
+	return l;
+}
+
+function totalLevels(arr) {
+	var l = 0;
+	for (var i = 0; i < arr.length; l++,i+=l) {}
+	return l;
+}
+
+function buildGraph(arr) {
+	var graph = [];
+	var levels = totalLevels(arr);
+	for (var i = 0; i < arr.length; i++) {
+		var level = levelFrom(i);
+		if (!graph[i]) graph[i] = [];
+		if (i + level < arr.length) graph[i].push(i + level);
+		if (i + level + 1 < arr.length) graph[i].push(i + level + 1);
+	}
+	return graph;
+}
+
+function findBiggestSum(arr, graph, destination) {
+	var i = 0;
+	var dist = [];
+	for (var i = 0; i < arr.length; i++) {
+		dist[i] = Math.infinity;
+	}
+	var s0 = [graph[0]];
+}
+
+function biggestSum(t) {
+	var graph = buildGraph(t);
+	var destinations = getDest(graph);
+	
+	var best = 0;
+	for (var i = 0; i < destinations.length; i++) {
+		findBiggestSum(t, graph, i);
+	}
+}
+
+test("levelFrom", function() {
+	equal(levelFrom(0), 1);
+	equal(levelFrom(1), 2);
+	equal(levelFrom(2), 2);
+	equal(levelFrom(3), 3);
+	equal(levelFrom(4), 3);
+	equal(levelFrom(5), 3);
+	equal(levelFrom(6), 4);
+	equal(levelFrom(9), 4);
+	equal(levelFrom(10), 5);
+});
+
+test("totalLevels", function() {
+	equal(totalLevels([1]), 1);
+	equal(totalLevels([1,2,3]), 2);
+	equal(totalLevels(smallTree), 4);
+	equal(totalLevels(bigTree), 15);
+});
+
+test("biggestSum", function() {
+	equal(biggestSum(smallTree),23);
+	//equal(biggestSum(bigTree), 0);
+});
+
+
+</script>
+
+<div id="qunit" />
+</body>
