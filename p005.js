@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript">
-
 Array.prototype.count = function(n) {
   var count = 0;
   for (var i = 0; i < this.length; i++) {
@@ -45,10 +38,3 @@ test("smallestDivTo", function() {
   equal(smallestDivTo(10), 2520);
   equal(smallestDivTo(20), 232792560);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-
-<script type="text/javascript" id="euler">
 function primeFactors(n) {
   var f = [];
   var d = 2;
@@ -56,10 +49,3 @@ test("numDivisors", function() {
   equal(numDivisors(21), 4);
   equal(numDivisors(28), 6);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

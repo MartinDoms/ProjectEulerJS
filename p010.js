@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 function sumOfPrimes(n) {
   var a = [];
   var sum = 0;
@@ -23,10 +16,3 @@ test("sumOfPrimes", function() {
   equal(17, sumOfPrimes(10));
   equal(142913828922, sumOfPrimes(2000000));
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

@@ -1,25 +1,25 @@
 <html>
 <body>
 <head>
-	<script text="text/javascript" src="qunit/qunit.js"></script>
-	<link rel="stylesheet" href="qunit/qunit.css">
+  <script text="text/javascript" src="qunit/qunit.js"></script>
+  <link rel="stylesheet" href="qunit/qunit.css">
 <script type="text/javascript" id="euler">
 
 function factorial(n) {
-	var r = 1;
-	for (var i = 1; i <= n; i++) r *= i;
-	return r;
+  var r = 1;
+  for (var i = 1; i <= n; i++) r *= i;
+  return r;
 }
 
 function routes(size) {
-	var r = 1;
-	for (var i = size+1; i <= size*2; i++) r *= i;
-	return r/factorial(size);
+  var r = 1;
+  for (var i = size+1; i <= size*2; i++) r *= i;
+  return r/factorial(size);
 }
 
 test("routes", function() {
-	equal(routes(2), 6);
-	equal(routes(20), 137846528820);
+  equal(routes(2), 6);
+  equal(routes(20), 137846528820);
 });
 
 

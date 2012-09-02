@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 var grid = 
 [08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08,
  49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00,
@@ -53,10 +46,3 @@ function largestProd(n) {
 test("largestProd", function() {
   equal(largestProd(4), 70600674);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

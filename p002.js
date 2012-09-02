@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 function evenFibSum(max) {
   var result = 0;
   var fib = 2;
@@ -22,11 +15,3 @@ test("evenFibSum", function() {
   equal(evenFibSum(89), 44);
   equal(evenFibSum(4000000), 4613732);
 });
-
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 var mem = [];
 
 function chainLengthRec(n) {
@@ -46,10 +39,3 @@ test("chainLength", function() {
   equal(chainLength(4), 3);
   equal(chainLength(5), 6);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 var count = [0,3,3,5,4,4,3,5,5,4]
 
 function lettersIn(n) {
@@ -112,10 +105,3 @@ test("lettersIn", function() {
   equal(lettersIn(989), 24);
   equal(lettersIn(1000), 11);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

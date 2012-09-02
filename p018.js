@@ -1,11 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-
-<script type="text/javascript" id="euler">
-
 var smallTree = [
 3,
 7, 4,
@@ -175,11 +167,3 @@ test("biggestSum", function() {
   equal(biggestSum(smallTree),23);
   equal(biggestSum(bigTree), 1074);
 });
-
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 function tripletProd(n) {
   for (var c = n-2; c > 2; c--) {
     for (var b = c - 1; b > 1; b--) {
@@ -21,10 +14,3 @@ test("Triplet", function() {
   equal(tripletProd(12), 60);
   equal(tripletProd(1000), 31875000);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

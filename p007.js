@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 function sumOfSquares(x) {
   return ((2*x*x*x) + (3*x*x) + x)/6;
 }
@@ -39,10 +32,3 @@ test("sumDiff", function() {
   equal(sumDiff(10), 2640);
   equal(sumDiff(100), 25164150);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

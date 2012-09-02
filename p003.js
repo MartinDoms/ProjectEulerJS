@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 function isPrime(x) {
   var s = Math.sqrt(x);
   for (var i = 2; i < s; i++) {
@@ -36,11 +29,3 @@ test("evenFibSum", function() {
   equal(largestPrimeFactor(13195), 29);
   equal(largestPrimeFactor(600851475143 ), 6857);
 });
-
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

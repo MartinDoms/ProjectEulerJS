@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 Math.log10 = function(n) {
   return Math.log(n)/Math.log(10);
 }
@@ -35,11 +28,3 @@ test("sumOfDigits", function() {
   equal(sumOfDigits(2, 15), 26);
   equal(sumOfDigits(2, 1000), 1366);
 });
-
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

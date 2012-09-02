@@ -1,11 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-
-<script type="text/javascript">
-
 function isPalindrome(x) {
   var str = x.toString();
   for (var i = 0; i <= str.length/2; i++) {
@@ -42,10 +34,3 @@ test("Largest palindome tests", function() {
   equal(largestPalinOfDigits(2), 9009);
   equal(largestPalinOfDigits(3), 906609);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>

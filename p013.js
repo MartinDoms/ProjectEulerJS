@@ -1,10 +1,3 @@
-<html>
-<body>
-<head>
-  <script text="text/javascript" src="qunit/qunit.js"></script>
-  <link rel="stylesheet" href="qunit/qunit.css">
-<script type="text/javascript" id="euler">
-
 function sum() {
   var i = 0;
   i += 3710728753390;
@@ -114,10 +107,3 @@ function sum() {
 test("sum", function() {
   equal(sum(), 5537376230);
 });
-
-</script>
-</head>
-<body>
-<div id="qunit" />
-</body>
-</html>
