@@ -9,7 +9,7 @@
     while (padded.length < 3) padded = "0"+padded;
 	
 	var div = document.getElementById("eulerContent");
-	div.innerHTML = '<img src="spinner.gif" />';
+	div.innerHTML = '<img src="http://blog.martindoms.com/wp-content/uploads/2012/09/spinner.gif" />';
 	
 	var scr = document.createElement("script");
     scr.type = "text/javascript";
