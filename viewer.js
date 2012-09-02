@@ -3,7 +3,7 @@
 	if (!response || !response.data || !response.data.content) {
 		div.innerHTML = "(not found)";
 	}
-    var resp = atob(response.data.content.replace(/\s/g, ''));
+    else { var resp = atob(response.data.content.replace(/\s/g, '')); }
     div.innerHTML = resp;
   }
   
