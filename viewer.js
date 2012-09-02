@@ -20,7 +20,7 @@
     var head = document.getElementsByTagName("head")[0];
     head.insertBefore(scr, head.firstChild);
 	
-	document.getElementById("eulerTitle").InnerHTML = "Euler solution #" + padded;
+	document.getElementById("eulerTitle").text = "Euler solution #" + padded;
   }
   function getNewEuler() {
     var num = parseInt(document.getElementById("numStr").value);
