@@ -1,6 +1,9 @@
   function githubCallback(response) {
+	var div = document.getElementById("eulerContent");
+	if (!response || !response.data || !response.data.content) {
+		div.innerHTML = "(not found)";
+	}
     var resp = atob(response.data.content.replace(/\s/g, ''));
-    var div = document.getElementById("eulerContent");
     div.innerHTML = resp;
   }
   
@@ -16,6 +19,8 @@
     scr.src = "https://api.github.com/repos/MartinDoms/ProjectEulerJS/contents/p"+padded+".js?callback=githubCallback";
     var head = document.getElementsByTagName("head")[0];
     head.insertBefore(scr, head.firstChild);
+	
+	document.getElementById("eulerTitle").InnerHTML = "Euler solution #" + padded;
   }
   function getNewEuler() {
     var num = parseInt(document.getElementById("numStr").value);
