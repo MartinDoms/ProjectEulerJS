@@ -1,6 +1,6 @@
   function githubCallback(response) {
     var resp = atob(response.data.content.replace(/\s/g, ''));
-    var div = document.getElementById("content");
+    var div = document.getElementById("eulerContent");
     div.innerHTML = resp;
   }
   
