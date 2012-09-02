@@ -3,8 +3,10 @@
 	if (!response || !response.data || !response.data.content) {
 		div.innerHTML = "(not found)";
 	}
-    else { var resp = atob(response.data.content.replace(/\s/g, '')); }
-    div.innerHTML = resp;
+    else { 
+		var resp = atob(response.data.content.replace(/\s/g, '')); 
+		div.innerHTML = resp;
+	}
   }
   
   function getEulerFromGithub(num) {
