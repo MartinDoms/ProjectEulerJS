@@ -8,7 +8,7 @@
     var padded = num.toString();
     while (padded.length < 3) padded = "0"+padded;
 	
-	var div = document.getElementById("content");
+	var div = document.getElementById("eulerContent");
 	div.innerHTML = '<img src="spinner.gif" />';
 	
 	var scr = document.createElement("script");
