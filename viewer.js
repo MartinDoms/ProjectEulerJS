@@ -30,3 +30,5 @@
       getEulerFromGithub(num);
     }
   }
+  
+  $('#eulerLoadLink').click(getNewEuler);
