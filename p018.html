@@ -43,6 +43,13 @@ Array.prototype.remove = function(n) {
     }
   }
 }
+Array.prototype.copy = function() {
+	var result = [];
+	for (var i = 0; i < this.length; i++) {
+		result[i] = this[i];
+	}
+	return result;
+}
 
 function getDest(graph) {
   var d = [];
@@ -73,7 +80,9 @@ function buildGraph(arr) {
     if (!graph[i]) graph[i] = [];
     if (i + level < arr.length) graph[i].push(i + level);
     if (i + level + 1 < arr.length) graph[i].push(i + level + 1);
+    if (levels == level) graph[i].push(arr.length);
   }
+  graph[graph.length] = [];
   return graph;
 }
 
@@ -133,23 +142,21 @@ function findBiggestPath(weights, adjList, source, destination) {
 }
 
 function biggestSum(t) {
-  var graph = buildGraph(t);
-  var destinations = getDest(graph);
+  var arr = t.copy();
+  var graph = buildGraph(arr);
+  arr[arr.length] = 0;
+
   var weights = [];
-  for (var i = 0; i < t.length; i++) {
-    weights[i] = 9999-t[i];
+  for (var i = 0; i < arr.length; i++) {
+    weights[i] = 9999-arr[i];
   }
   
-  var best = 0;
-  for (var i = 0; i < destinations.length; i++) {
-    var path = findBiggestPath(weights, graph, 0, destinations[i]);
-    var sum = 0;
-    for (var j = 0; j < path.length; j++) {
-      sum += t[path[j]];
-    }
-    if (sum > best) best = sum;
+  var path = findBiggestPath(weights, graph, 0, arr.length-1);
+  var sum = 0;
+  for (var j = 0; j < path.length; j++) {
+    sum += arr[path[j]];
   }
-  return best;
+  return sum;
 }
 
 test("levelFrom", function() {
